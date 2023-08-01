@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: rgb(150, 0, 237);
+      background-color: azure;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    h1:hover {
+      background-color: rgb(202, 202, 202);
+      color: purple;
+      transition: 0.5s;
+    }
+    body {
+      background-color: rgb(41, 41, 41);
+    }
+  </style>
+</head>
+<body>
+  
+
+  <script>
+    var nome = window.prompt('Qual é o seu nome? ');
+
+    document.write(`<h1> Olá <strong> ${nome}! </strong> Seu nome tem ${nome.length} letras. </h1>`);
+
+    document.write(`<h1> Seu nome em maiúsculas é <strong> ${nome.toUpperCase()} ! </strong> </h1>`);
+    
+    document.write(`<h1> Seu nome em maiúsculas é <strong> ${nome.toLocaleLowerCase()} ! </strong> </h1>`)
+  </script>
+</body>
+</html>

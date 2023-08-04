@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros passos com DOM</title>
+    <style>
+      body {
+        background-color: rgb(26, 0, 56);
+        color: white;
+        font: normal 18pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Iniciando estudos <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg_1">Clique em mim</div>
+    <div class="msg_2">Clique em mim</div>
+
+    <script>
+      const thirdMessage = window.document.getElementsByClassName("msg_2")[0];
+      const corpo = window.document.body;
+      const message = window.document.getElementById("msg");
+      const meuPrimeroParagrafo = window.document.getElementsByTagName("p")[0];
+      const secondMessage = window.document.getElementsByName("msg_1")[0];
+
+      meuPrimeroParagrafo.style.color = "lightgreen";
+
+      window.document.write(
+        "Está escrito assim: " + meuPrimeroParagrafo.innerText
+      );
+
+      message.style.background = "blue";
+      message.innerText = "Carregando...";
+
+      //window.document.getElementById('msg').innerText = 'Carregando...'
+
+      secondMessage.style.background = "green";
+      secondMessage.innerText = "Concluído✅";
+
+      thirdMessage.style.background = "orange";
+      thirdMessage.style.color = "black";
+      thirdMessage.innerText = "Atenção! Algo deu errado❗";
+    </script>
+  </body>
+</html>

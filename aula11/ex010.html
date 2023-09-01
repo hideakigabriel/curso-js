@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>:: DETRAN :: DEPARTAMENTO ESTADUAL DE TRÂNSITO DE SÃO PAULO</title>
+  <meta name="description" content="">
+  <style>
+    .err {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Multas</h1>  
+  Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+  <input type="button" value="Verificar" onclick="calcular()">
+  <div id="res"></div>
+
+  <script>
+    const txtv = window.document.querySelector('input#txtvel')
+    const res = window.document.querySelector('div#res')
+
+    function calcular() {
+      let vel = Number(txtv.value)
+      res.innerHTML = `Sua velocidade atual é de <strong>${vel}Km/h</strong>`
+
+      if (vel <=0 ) {
+        res.innerHTML += '<p class="err"><strong>A velocidade deve ser maior que 0</strong></p>'
+      }
+
+      if (vel > 60) {
+        res.innerHTML += '<p>Você está <strong> MULTADO por excesso de velocidade</strong></p>'
+      }
+
+      res.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'
+    }
+  </script>
+</body>
+</html>
